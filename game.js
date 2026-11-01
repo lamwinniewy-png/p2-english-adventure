@@ -98,7 +98,7 @@ function houseHTML(big) {
   const open = new Set(order.slice(0, blocks));
   return `<div class="house ${big ? 'big' : ''}"><img src="img/house.webp" alt="Susu and Neko's dream house">
     <div class="house-grid">${[...Array(HOUSE_BLOCKS).keys()].map(i => `<i class="${open.has(i) ? 'gone' : ''}" style="--d:${(i % 8 + Math.floor(i / 8)) % 4}"></i>`).join('')}</div></div>
-    <div class="house-meta"><b>${blocks}/${HOUSE_BLOCKS}</b> blocks built${blocks < HOUSE_BLOCKS ? ` · next block in <b>${STARS_PER_BLOCK - S.stars % STARS_PER_BLOCK}</b> 💎` : ' · The house is finished!'}</div>`;
+    <div class="house-meta"><b>${blocks}/${HOUSE_BLOCKS}</b> blocks built${blocks < HOUSE_BLOCKS ? ` · next block in <b>${STARS_PER_BLOCK - S.stars % STARS_PER_BLOCK}</b> 💎` : ' · The house is finished!'}</div>${blocks===0?'<div class="house-hint">Each block you build shows part of a secret house.</div>':''}`;
 }
 
 /* ---------- islands ---------- */

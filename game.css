@@ -201,3 +201,9 @@ h1,h2,h3{font-family:var(--f-px);font-weight:600;letter-spacing:.3px}
 .pill.next,.step2.on,.qrow .go,.book-cta .go{background:#D9488A;color:#fff;text-shadow:none}
 .step2.on{box-shadow:0 4px 0 #A82E66;border-color:#F7B6D3}
 .pill.next{border-color:#F7B6D3}
+/* v4: grid fully covers the house picture; blocks reveal it */
+.house{aspect-ratio:8/5;border-radius:10px;overflow:hidden;box-shadow:0 0 0 3px #fff,0 4px 0 3px #E6D3F2}
+.house img{object-fit:cover;object-position:50% 40%}
+.house-grid{inset:0}
+.house-grid i{opacity:1}
+.house-hint{text-align:center;font-size:14px;color:#8A7A9C;margin-top:2px}
